@@ -2,7 +2,7 @@
 @import "utils/mixins.scss";
 @import "utils/variables.scss";
 body{
-    background-color: $grismap;
+    background-color:grey;
 }
 /***titrage et générique***/
 a{
@@ -19,7 +19,10 @@ h3{
 }
 h4{
     @include h4style;
-} 
+}
+.logo-pages img{
+    margin-right: 80px
+}
 /*header*/
 header{
     @include flexcolumncentre;
@@ -32,11 +35,12 @@ header{
         width: 90%;
         height: 80%;         
         img{
-            width: 60%;
+            width: 60%;            
         }
         i{
             position: absolute;
             left: 0;
+            top: 14px;            
         }       
     }
     .map{
@@ -72,15 +76,17 @@ header{
           
         img{
             width: 100%;
-            height:auto;
+            max-height:220px;
         } 
     }     
         
 }
 /* section fonctionnement*/
 #fonctionnement{
-    margin:40px 0;
+    background-color: white;
+    /* margin:40px 0; */
     padding-left: 20px;
+    height: 280px;
     
     .card a{
         @include flexeven;
@@ -154,13 +160,15 @@ header{
         
     }
 }
-main{
-    padding: 0 10px;
+.main-pages{
+    position: relative;
+    top: -14px;
+    padding: 0 10px; 
     background-color: gray;
+    border-radius: 15px 15px 0 0;   
     .bloc-main-title-page{
         @include flexbet;
-        margin-bottom: 20px;   
-
+        margin-bottom: 20px;
     }
     .entrees,.desserts,.plats{
         @include flexcol;        
@@ -220,4 +228,3 @@ footer{
 }
 
 
- 

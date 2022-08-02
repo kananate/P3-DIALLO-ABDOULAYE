@@ -54,7 +54,7 @@ table {
 }
 
 body {
-  background-color: #eaeaea;
+  background-color: grey;
 }
 
 /***titrage et générique***/
@@ -89,6 +89,10 @@ h4 {
   border-bottom: 2px #b0e0e6 solid;
 }
 
+.logo-pages img {
+  margin-right: 80px;
+}
+
 /*header*/
 header {
   display: flex;
@@ -113,6 +117,7 @@ header .logo img {
 header .logo i {
   position: absolute;
   left: 0;
+  top: 14px;
 }
 header .map {
   display: flex;
@@ -158,13 +163,15 @@ header .banner {
 }
 header .banner img {
   width: 100%;
-  height: auto;
+  max-height: 220px;
 }
 
 /* section fonctionnement*/
 #fonctionnement {
-  margin: 40px 0;
+  background-color: white;
+  /* margin:40px 0; */
   padding-left: 20px;
+  height: 280px;
 }
 #fonctionnement .card a {
   display: flex;
@@ -257,25 +264,28 @@ header .banner img {
   background-color: #d26bdb;
 }
 
-main {
+.main-pages {
+  position: relative;
+  top: -14px;
   padding: 0 10px;
   background-color: gray;
+  border-radius: 15px 15px 0 0;
 }
-main .bloc-main-title-page {
+.main-pages .bloc-main-title-page {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 20px;
 }
-main .entrees, main .desserts, main .plats {
+.main-pages .entrees, .main-pages .desserts, .main-pages .plats {
   display: flex;
   flex-direction: column;
 }
-main .entrees .bloc-card, main .desserts .bloc-card, main .plats .bloc-card {
+.main-pages .entrees .bloc-card, .main-pages .desserts .bloc-card, .main-pages .plats .bloc-card {
   display: flex;
   flex-direction: column;
 }
-main .entrees .bloc-card .card a, main .desserts .bloc-card .card a, main .plats .bloc-card .card a {
+.main-pages .entrees .bloc-card .card a, .main-pages .desserts .bloc-card .card a, .main-pages .plats .bloc-card .card a {
   width: 90%;
   height: 60px;
   margin-left: 10px;
@@ -290,16 +300,16 @@ main .entrees .bloc-card .card a, main .desserts .bloc-card .card a, main .plats
   background-color: white;
   align-items: center;
 }
-main .entrees .bloc-card .card a .card-bloc-right, main .desserts .bloc-card .card a .card-bloc-right, main .plats .bloc-card .card a .card-bloc-right {
+.main-pages .entrees .bloc-card .card a .card-bloc-right, .main-pages .desserts .bloc-card .card a .card-bloc-right, .main-pages .plats .bloc-card .card a .card-bloc-right {
   padding: 10px;
 }
-main .entrees .bloc-card .card a .card-bloc-left, main .desserts .bloc-card .card a .card-bloc-left, main .plats .bloc-card .card a .card-bloc-left {
+.main-pages .entrees .bloc-card .card a .card-bloc-left, .main-pages .desserts .bloc-card .card a .card-bloc-left, .main-pages .plats .bloc-card .card a .card-bloc-left {
   padding: 10px;
 }
-main .commande {
+.main-pages .commande {
   text-align: center;
 }
-main .commande button {
+.main-pages .commande button {
   display: inline-block;
   height: 35px;
   border-radius: 25px;
