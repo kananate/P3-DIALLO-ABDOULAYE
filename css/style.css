@@ -1,0 +1,342 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-color: #eaeaea;
+}
+
+/***titrage et générique***/
+a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: auto;
+  color: black;
+}
+
+h1 {
+  width: 60%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h2 {
+  padding-bottom: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+h3 {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+h4 {
+  width: 25px;
+  margin-bottom: 10px;
+  border-bottom: 2px #b0e0e6 solid;
+}
+
+/*header*/
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #fcfcfc;
+}
+header .logo {
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 80%;
+}
+header .logo img {
+  width: 60%;
+}
+header .logo i {
+  position: absolute;
+  left: 0;
+}
+header .map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: grey;
+  width: 100%;
+  height: 30px;
+}
+header .map i {
+  margin-right: 10px;
+}
+header .bloc-main-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+header .bloc-main-title h1 {
+  text-align: center;
+}
+header .bloc-main-title p {
+  text-align: center;
+  margin: 20px 0;
+}
+header .bloc-main-title button {
+  display: inline-block;
+  height: 35px;
+  border-radius: 25px;
+  border: none;
+  background-color: #d26bdb;
+  padding: 10px;
+  color: #fff;
+  min-width: 100px;
+}
+header .banner {
+  width: 100%;
+}
+header .banner img {
+  width: 100%;
+  height: auto;
+}
+
+/* section fonctionnement*/
+#fonctionnement {
+  margin: 40px 0;
+  padding-left: 20px;
+}
+#fonctionnement .card a {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+  height: 60px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 15px;
+  background-color: #eaeaea;
+  box-shadow: 2px 2px 0 1px grey;
+  position: relative;
+}
+#fonctionnement .card a .circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+  position: absolute;
+  left: -10px;
+  font-size: 10px;
+  background-color: #9255dc;
+}
+#fonctionnement .card a .card-text {
+  margin-right: 10px;
+  font-weight: bolder;
+}
+#fonctionnement .card a .fa-shop {
+  color: #9255dc;
+}
+
+/*section restaurant*/
+#restos {
+  background-color: #f6f6f6;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+#restos h2 {
+  padding-top: 20px;
+}
+#restos .bloc-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#restos .bloc-card .card {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+#restos .bloc-card .card .card-image {
+  position: relative;
+  margin-bottom: 10px;
+}
+#restos .bloc-card .card .card-image img {
+  width: 100%;
+  height: 140px;
+  border-radius: 10px 10px 0 0;
+}
+#restos .bloc-card .card .card-image .news {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #99e2d0;
+  width: 30%;
+  height: 30px;
+  color: green;
+  top: 5px;
+  right: 8px;
+}
+#restos .bloc-card .card .card-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 5px;
+}
+#restos .bloc-card .card .card-body .card-bloc-right {
+  display: flex;
+  align-items: center;
+}
+#restos .bloc-card .card .card-body .card-bloc-right i:hover {
+  background-color: #d26bdb;
+}
+
+main {
+  padding: 0 10px;
+  background-color: gray;
+}
+main .bloc-main-title-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+main .entrees, main .desserts, main .plats {
+  display: flex;
+  flex-direction: column;
+}
+main .entrees .bloc-card, main .desserts .bloc-card, main .plats .bloc-card {
+  display: flex;
+  flex-direction: column;
+}
+main .entrees .bloc-card .card a, main .desserts .bloc-card .card a, main .plats .bloc-card .card a {
+  width: 90%;
+  height: 60px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 15px;
+  background-color: #eaeaea;
+  box-shadow: 2px 2px 0 1px grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+}
+main .entrees .bloc-card .card a .card-bloc-right, main .desserts .bloc-card .card a .card-bloc-right, main .plats .bloc-card .card a .card-bloc-right {
+  padding: 10px;
+}
+main .entrees .bloc-card .card a .card-bloc-left, main .desserts .bloc-card .card a .card-bloc-left, main .plats .bloc-card .card a .card-bloc-left {
+  padding: 10px;
+}
+main .commande {
+  text-align: center;
+}
+main .commande button {
+  display: inline-block;
+  height: 35px;
+  border-radius: 25px;
+  border: none;
+  background-color: #d26bdb;
+  padding: 10px;
+  color: #fff;
+  margin-bottom: 20px;
+  min-width: 120px;
+  cursor: pointer;
+}
+
+/***************footer********************/
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 160px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  background-color: #353535;
+}
+footer p {
+  margin-bottom: 15px;
+}
+footer p a {
+  text-decoration: none;
+  color: white;
+}
+footer p a i {
+  margin-right: 10px;
+}
+footer p a img {
+  width: 70%;
+  height: 25px;
+  margin-top: 15px;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */

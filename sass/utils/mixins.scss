@@ -1,0 +1,101 @@
+@mixin flexcol{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flexcolumncentre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+@mixin flexrowcentre{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    
+}
+@mixin flexcentre{
+    display: flex;    
+    justify-content: center; 
+    align-items: center;
+}
+@mixin flexeven{
+    display: flex;    
+    justify-content:space-evenly; 
+    align-items: center;
+}
+@mixin flexbet{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+@mixin flexstart{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+@mixin position-absolute{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+@mixin form-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 25px;
+    position: absolute;
+    left:-10px; 
+}
+@mixin button-style {
+    display: inline-block;    
+    height: 35px;
+    border-radius: 25px;
+    border: none;
+    background-color: $violet;
+    padding: 10px;
+    color: $colorwhite;
+    
+}
+@mixin card-without-image{
+    width: 90%;
+    height: 60px;
+    margin-left: 10px;
+    margin-bottom: 20px;        
+    border: none;
+    border-radius: 15px;
+    background-color: $grismap;
+    box-shadow: 2px 2px 0 1px grey;
+}
+@mixin aligncenter {
+    text-align: center;    
+}
+@mixin stylelien {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: auto;
+    color: black;
+    
+}
+@mixin  h1style {
+    width: 60%;
+    font-size: 20px;
+    font-weight: bold;
+}
+@mixin h2style {
+
+    padding-bottom: 20px;                      
+    font-weight: bold;
+    font-size: 20px;
+}
+@mixin h3style{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+@mixin h4style {
+    width: 25px;
+    margin-bottom: 10px;
+    border-bottom: 2px #b0e0e6 solid;
+    
+}
