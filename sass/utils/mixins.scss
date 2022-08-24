@@ -47,25 +47,15 @@
     position: absolute;
     left:-10px; 
 }
-@mixin button-style {
-    display: inline-block;    
-    height: 35px;
-    border-radius: 25px;
-    border: none;
-    background-color: $violet;
-    padding: 10px;
-    color: $colorwhite;
-    
-}
 @mixin card-without-image{
-    width: 90%;
+    /* width: 90%; */
     height: 60px;
     margin-left: 10px;
     margin-bottom: 20px;        
     border: none;
     border-radius: 15px;
     background-color: $grismap;
-    box-shadow: 2px 2px 0 1px grey;
+    box-shadow: 0 5px 16px #0000002e;
 }
 @mixin aligncenter {
     text-align: center;    
@@ -80,8 +70,9 @@
 }
 @mixin  h1style {
     width: 60%;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
+    
 }
 @mixin h2style {
 
@@ -97,5 +88,8 @@
     width: 25px;
     margin-bottom: 10px;
     border-bottom: 2px #b0e0e6 solid;
+    /* margin-left: 10px; */
     
 }
+
+

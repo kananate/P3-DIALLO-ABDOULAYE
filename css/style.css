@@ -53,44 +53,76 @@ table {
   border-spacing: 0;
 }
 
-body {
-  background-color: grey;
+/* Animation du loader */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Animation du bloc-spinner*/
+@keyframes off {
+  from {
+    opacity: 90%;
+  }
+  to {
+    display: none;
+    opacity: 0%;
+    z-index: -1;
+  }
+}
+/*aniamation des cartes*/
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.anim-1 {
+  animation-delay: 0.1s;
+}
+.anim-2 {
+  animation-delay: 0.2s;
+}
+.anim-3 {
+  animation-delay: 0.3s;
+}
+.anim-4 {
+  animation-delay: 0.4s;
+}
+.anim-5 {
+  animation-delay: 0.5s;
+}
+.anim-6 {
+  animation-delay: 0.6s;
+}
+.anim-7 {
+  animation-delay: 0.7s;
+}
+.anim-8 {
+  animation-delay: 0.8s;
+}
+.anim-9 {
+  animation-delay: 0.9s;
+}
+.anim-10 {
+  animation-delay: 1s;
 }
 
-/***titrage et générique***/
-a {
-  text-decoration: none;
-  display: block;
-  width: 100%;
-  height: auto;
-  color: black;
-}
-
-h1 {
-  width: 60%;
-  font-size: 20px;
+/* Animation du coeur*/
+.fa-heart-animated {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  font-size: 0px;
+  color: #9356DC;
   font-weight: bold;
-}
-
-h2 {
-  padding-bottom: 20px;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-h3 {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-h4 {
-  width: 25px;
-  margin-bottom: 10px;
-  border-bottom: 2px #b0e0e6 solid;
-}
-
-.logo-pages img {
-  margin-right: 80px;
+  transition-duration: 0.5s;
 }
 
 /*header*/
@@ -117,7 +149,8 @@ header .logo img {
 header .logo i {
   position: absolute;
   left: 0;
-  top: 14px;
+  top: 10px;
+  font-size: x-large;
 }
 header .map {
   display: flex;
@@ -136,7 +169,7 @@ header .bloc-main-title {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #eaeaea;
+  background-color: #f5f5f5;
   width: 100%;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -148,16 +181,6 @@ header .bloc-main-title p {
   text-align: center;
   margin: 20px 0;
 }
-header .bloc-main-title button {
-  display: inline-block;
-  height: 35px;
-  border-radius: 25px;
-  border: none;
-  background-color: #d26bdb;
-  padding: 10px;
-  color: #fff;
-  min-width: 100px;
-}
 header .banner {
   width: 100%;
 }
@@ -166,28 +189,52 @@ header .banner img {
   max-height: 220px;
 }
 
+@media screen and (min-width: 800px) {
+  header {
+    width: 100%;
+  }
+  header .logo img {
+    width: 40%;
+    margin: 20px 0;
+  }
+  .logo {
+    margin-right: 10px;
+    width: 100%;
+  }
+  header .logo-pages img {
+    margin-right: 400px;
+  }
+  .logo-pages a i {
+    margin-top: 20px;
+    font-size: xx-large;
+  }
+}
 /* section fonctionnement*/
 #fonctionnement {
   background-color: white;
-  /* margin:40px 0; */
   padding-left: 20px;
+  padding-top: 20px;
   height: 280px;
+  padding-bottom: 20px;
 }
-#fonctionnement .card a {
+#fonctionnement .bloc-card .card {
+  margin-bottom: 20px;
+  width: 95%;
+  height: 60px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 90%;
+  /* width: 90%; */
   height: 60px;
   margin-left: 10px;
   margin-bottom: 20px;
   border: none;
   border-radius: 15px;
   background-color: #eaeaea;
-  box-shadow: 2px 2px 0 1px grey;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1803921569);
   position: relative;
 }
-#fonctionnement .card a .circle {
+#fonctionnement .bloc-card .card .circle {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -197,20 +244,24 @@ header .banner img {
   position: absolute;
   left: -10px;
   font-size: 10px;
-  background-color: #9255dc;
+  background-color: #9356DC;
 }
-#fonctionnement .card a .card-text {
+#fonctionnement .bloc-card .card .card-text {
   margin-right: 10px;
   font-weight: bolder;
 }
-#fonctionnement .card a .fa-shop {
-  color: #9255dc;
+#fonctionnement .bloc-card .card .fa-solid {
+  margin: 0 55px;
+}
+#fonctionnement .bloc-card .card .fa-shop {
+  color: #9356DC;
 }
 
 /*section restaurant*/
 #restos {
-  background-color: #f6f6f6;
+  background-color: #f5f5f5;
   padding-left: 20px;
+  padding-right: 10px;
   padding-bottom: 20px;
 }
 #restos h2 {
@@ -223,106 +274,256 @@ header .banner img {
   align-items: center;
 }
 #restos .bloc-card .card {
+  min-height: 60px;
+}
+#restos .bloc-card .card a {
   width: 100%;
   height: auto;
   background-color: white;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
 }
-#restos .bloc-card .card .card-image {
+#restos .bloc-card .card a .card-image {
   position: relative;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
-#restos .bloc-card .card .card-image img {
+#restos .bloc-card .card a .card-image img {
   width: 100%;
   height: 140px;
   border-radius: 10px 10px 0 0;
 }
-#restos .bloc-card .card .card-image .news {
+#restos .bloc-card .card a .card-image .news {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   width: 30%;
   height: 30px;
   color: green;
   top: 5px;
   right: 8px;
 }
-#restos .bloc-card .card .card-body {
+#restos .bloc-card .card a .card-body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 10px 5px;
+  margin: 0 5px;
 }
-#restos .bloc-card .card .card-body .card-bloc-right {
+#restos .bloc-card .card a .card-body .card-bloc-right {
+  position: relative;
+  height: 21px;
   display: flex;
   align-items: center;
+  margin-top: 10px;
+  margin-right: 10px;
 }
-#restos .bloc-card .card .card-body .card-bloc-right i:hover {
-  background-color: #d26bdb;
+#restos .bloc-card .card a .card-body .card-bloc-right:hover .fa-heart-animated {
+  font-size: 20px;
 }
 
+/*responsive*/
+@media screen and (min-width: 500px) {
+  #fonctionnement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #fonctionnement h2 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #restos h2 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 800px) {
+  #restos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #restos .bloc-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #restos .card {
+    margin-right: 10px;
+    width: 300px;
+  }
+}
 .main-pages {
   position: relative;
   top: -14px;
   padding: 0 10px;
-  background-color: gray;
+  background-color: #f5f5f5;
   border-radius: 15px 15px 0 0;
 }
 .main-pages .bloc-main-title-page {
+  padding-top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 20px;
 }
-.main-pages .entrees, .main-pages .desserts, .main-pages .plats {
-  display: flex;
-  flex-direction: column;
+.main-pages .bloc-main-title-page .icon-h {
+  position: relative;
+  height: 21px;
 }
-.main-pages .entrees .bloc-card, .main-pages .desserts .bloc-card, .main-pages .plats .bloc-card {
-  display: flex;
-  flex-direction: column;
-}
-.main-pages .entrees .bloc-card .card a, .main-pages .desserts .bloc-card .card a, .main-pages .plats .bloc-card .card a {
-  width: 90%;
-  height: 60px;
-  margin-left: 10px;
-  margin-bottom: 20px;
-  border: none;
-  border-radius: 15px;
-  background-color: #eaeaea;
-  box-shadow: 2px 2px 0 1px grey;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: white;
-  align-items: center;
-}
-.main-pages .entrees .bloc-card .card a .card-bloc-right, .main-pages .desserts .bloc-card .card a .card-bloc-right, .main-pages .plats .bloc-card .card a .card-bloc-right {
-  padding: 10px;
-}
-.main-pages .entrees .bloc-card .card a .card-bloc-left, .main-pages .desserts .bloc-card .card a .card-bloc-left, .main-pages .plats .bloc-card .card a .card-bloc-left {
-  padding: 10px;
-}
-.main-pages .commande {
-  text-align: center;
-}
-.main-pages .commande button {
-  display: inline-block;
-  height: 35px;
-  border-radius: 25px;
-  border: none;
-  background-color: #d26bdb;
-  padding: 10px;
-  color: #fff;
-  margin-bottom: 20px;
-  min-width: 120px;
-  cursor: pointer;
+.main-pages .bloc-main-title-page .icon-h:hover .fa-heart-animated {
+  font-size: 22px;
 }
 
-/***************footer********************/
+.entrees, .desserts, .plats {
+  display: flex;
+  flex-direction: column;
+}
+.entrees .bloc-card, .desserts .bloc-card, .plats .bloc-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+h4 {
+  margin-top: 20px;
+}
+
+.card {
+  border-radius: 10px;
+  background-color: white;
+  width: 100%;
+  display: block;
+  margin-left: auto; /*centré*/
+  margin-right: auto;
+  margin-top: 12px;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1803921569);
+  position: relative;
+  animation-duration: 1s;
+  animation-name: appear;
+  transform: scale(0);
+  animation-fill-mode: both;
+}
+
+.card a {
+  display: flex;
+}
+
+.card a:hover .card-bloc-right p {
+  width: 100px;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.card-bloc-right p:hover .card-bloc-left {
+  width: calc(100% - 100px);
+}
+
+h3 {
+  font-weight: 800;
+}
+
+.card-bloc-left {
+  width: 100%;
+  padding: 0.8em 0 0.8em 0.8em;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.text {
+  display: flex;
+  padding-top: 5px;
+}
+
+.text:first-child {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 82%;
+}
+
+.price {
+  position: absolute;
+  right: 5%;
+  /*   margin-top: 40px;
+    margin-right: 4px; */
+}
+
+.check {
+  height: 100%;
+  right: 0px;
+  top: 0;
+  width: 0px;
+  background: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.fa-check {
+  background-color: white;
+  color: green;
+  border-radius: 25px;
+}
+
+.commande {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 800px) {
+  .main-pages {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .bloc-main-title-page h1 {
+    text-align: right;
+  }
+  .bloc-main-title-page .icon-h {
+    margin-right: 280px;
+    margin-top: 8px;
+  }
+  .entrees, .desserts, .plats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+  }
+  .main-pages .bloc-card {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    /* padding-right: 20px; */
+  }
+  .bloc-card .card {
+    width: 100%;
+  }
+  .text {
+    display: flex;
+    justify-content: space-between;
+  }
+  .text:first-child p {
+    width: 20%;
+    height: auto;
+  }
+  .card-content {
+    display: flex;
+    flex-direction: row;
+  }
+}
 footer {
   display: flex;
   flex-direction: column;
@@ -330,6 +531,7 @@ footer {
   height: 160px;
   padding-bottom: 20px;
   padding-left: 20px;
+  padding-top: 10px;
   background-color: #353535;
 }
 footer p {
@@ -346,7 +548,138 @@ footer p a img {
   width: 70%;
   height: 25px;
   margin-top: 15px;
-  color: white;
+}
+
+/* RESPONSIVE */
+@media screen and (min-width: 450px) {
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo-f {
+    color: white;
+    height: 40px;
+    margin-left: 25px;
+    margin-top: 30px;
+  }
+}
+.header-button {
+  min-width: 100px;
+}
+
+.commande button {
+  min-width: 120px;
+}
+
+button {
+  display: inline-block;
+  height: 40px;
+  border-radius: 25px;
+  background-image: linear-gradient(left bottom, #FF79DA, #9356DC);
+  background-image: -webkit-linear-gradient(left bottom, #da70d6, #ba55d3);
+  background-image: -moz-linear-gradient(left bottom, #da70d6, #ba55d3);
+  background-image: -ms-linear-gradient(left bottom, #da70d6, #ba55d3);
+  background-image: -o-linear-gradient(left bottom, #da70d6, #ba55d3);
+  border: none;
+  opacity: 0.85;
+  color: #fff;
+  transition: 400ms;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+button:hover {
+  cursor: pointer;
+  opacity: 1;
+  animation: flash 1.5s;
+  box-shadow: 5px 15px 21px rgba(0, 0, 0, 0.5019607843);
+}
+
+/*POLICES*/
+@font-face {
+  font-family: "Roboto";
+  src: url("Polices/Roboto/Roboto-Regular-webfont.ttf");
+}
+@font-face {
+  font-family: "shrikhand";
+  src: url("Polices/shrikhand/Shrikhand-Regular.ttf");
+}
+h1,
+h2,
+h3,
+p,
+a {
+  font-family: "Roboto";
+}
+
+body {
+  background-color: #f6f6f6;
+}
+
+/***titrage et générique***/
+a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: auto;
+  color: black;
+}
+
+h1 {
+  width: 60%;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+h2 {
+  padding-bottom: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+h3 {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+h4 {
+  width: 25px;
+  margin-bottom: 10px;
+  border-bottom: 2px #b0e0e6 solid;
+  /* margin-left: 10px; */
+}
+
+.logo-pages img {
+  margin-right: 80px;
+}
+
+/*LOADER DE LA PAGE PRINCIPALE*/
+.bloc {
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  animation: off;
+  animation-duration: 3s;
+  transition: opacity 3s ease-in-out;
+  animation-delay: 1.75s;
+  animation-fill-mode: both;
+}
+.bloc__loader {
+  align-items: center;
+  justify-content: center;
+  border: solid 17px lightgrey;
+  border-radius: 50%;
+  z-index: 1;
+  width: 167px;
+  height: 167px;
+  margin-top: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  border-top-color: #9356dc;
+  animation: rotate linear infinite;
+  animation-duration: 3s;
 }
 
 /*# sourceMappingURL=style.css.map */

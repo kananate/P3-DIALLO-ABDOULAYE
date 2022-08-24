@@ -1,0 +1,83 @@
+/*header*/
+
+header{
+    @include flexcolumncentre;
+    width: 100%; 
+    background-color: $gris;
+    .logo{
+        position: relative;
+        @include aligncenter;
+        @include flexcentre;
+        width: 90%;
+        height: 80%;         
+        img{
+            width: 60%;             
+        }
+        i{  
+            position: absolute;
+            left: 0;
+            top: 10px; 
+            font-size: x-large           
+        }       
+    }
+    .map{
+        @include flexcentre;
+        @include aligncenter;
+        background-color: grey;        
+        width: 100%;
+        height: 30px;        
+        i{
+            margin-right: 10px;
+        }
+    }
+    .bloc-main-title{
+        @include flexcolumncentre;
+        background-color: #f5f5f5;
+        width: 100%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        h1{
+            @include aligncenter;
+        }            
+        p{
+            @include aligncenter;
+            margin: 20px 0;            
+        }           
+    }      
+     
+    .banner{
+        width: 100%; 
+          
+        img{
+            width: 100%;
+            max-height:220px;
+        } 
+    }     
+        
+}
+@media screen and(min-width: 800px){
+    
+    header{
+        width: 100%;
+    }
+     header .logo img{
+        width: 40%;
+        margin: 20px 0; 
+        
+       
+    }
+    .logo{
+        margin-right: 10px;
+        width: 100%;
+       
+    }
+    header .logo-pages img{
+        margin-right: 400px;
+        
+        
+    }
+    .logo-pages a i{
+       margin-top: 20px;
+       font-size:xx-large;
+    }
+}

@@ -1,0 +1,41 @@
+/*POLICES*/
+
+@font-face {
+    font-family: "Roboto";
+    src: url("Polices/Roboto/Roboto-Regular-webfont.ttf");
+  }
+  
+  @font-face {
+    font-family: "shrikhand";
+    src: url("Polices/shrikhand/Shrikhand-Regular.ttf");
+  }
+  
+  h1,
+  h2,
+  h3,
+  p,
+  a {
+    font-family: "Roboto";
+  }
+  body{
+    background-color:$griscard;
+}
+/***titrage et générique***/
+a{
+    @include stylelien;
+ }
+ h1{
+    @include h1style;
+ }
+ h2{
+    @include h2style;
+}
+h3{
+    @include h3style;
+}
+h4{
+    @include h4style;
+}
+.logo-pages img{
+    margin-right: 80px
+}

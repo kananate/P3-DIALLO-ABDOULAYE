@@ -1,0 +1,42 @@
+footer{
+    @include flexstart;
+    height: 160px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-top: 10px;    
+    background-color: $blackfoot;
+    p{
+        margin-bottom: 15px;
+        
+        a{
+            text-decoration: none;
+            color: white;
+            i{
+                margin-right: 10px;
+            }
+            img{
+                width: 70%;
+                height: 25px;
+                margin-top: 15px;
+                                              
+            } 
+        }
+    }
+}
+
+/* RESPONSIVE */
+
+@media screen and(min-width: 450px){
+  footer{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+  }
+  .logo-f{
+    color: white;
+    height:40px ;
+    margin-left: 25px;
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,29 @@
+.header-button{    
+    min-width: 100px;    
+    }
+    .commande button{        
+        min-width: 120px;     
+    }                 
+
+button{
+    display: inline-block;
+    height: 40px;
+    border-radius: 25px; 
+    background-image: linear-gradient( left bottom,$secondary,$primary);
+    background-image: -webkit-linear-gradient( left bottom,#da70d6,#ba55d3);    
+    background-image: -moz-linear-gradient( left bottom,#da70d6,#ba55d3);
+    background-image: -ms-linear-gradient( left bottom,#da70d6,#ba55d3);
+    background-image: -o-linear-gradient( left bottom,#da70d6,#ba55d3);
+    border: none;    
+    opacity: 0.85;
+    color: #fff;
+    transition: 400ms;
+    margin-bottom: 20px;    
+    cursor: pointer;
+    &:hover{
+      cursor: pointer;
+      opacity: 1;
+	  animation: flash 1.5s;
+      box-shadow: 5px 15px 21px #00000080;
+    }
+} 
