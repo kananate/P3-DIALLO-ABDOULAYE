@@ -3,11 +3,9 @@
 .main-pages{
     position: relative;
     top: -14px; 
-    padding: 0 10px; 
+    padding: 0 10px ; 
     background-color: #f5f5f5;
-    border-radius: 15px 15px 0 0;
-    
-       
+    border-radius: 15px 15px 0 0;       
     .bloc-main-title-page{
         padding-top: 20px;
         @include flexbet;
@@ -27,8 +25,7 @@
         @include flexcol;            
         .bloc-card{
             @include flexcol;
-            margin-bottom: 10px;
-            
+            margin-bottom: 10px;          
             
         }
 }
@@ -40,7 +37,7 @@ h4{
     background-color: white;
     width: 100%;
     display: block; 
-    margin-left: auto; /*centré*/
+    margin-left: auto; 
     margin-right: auto;
     margin-top: 12px;    
     box-shadow: 0 5px 16px #0000002e;
@@ -50,45 +47,63 @@ h4{
     transform: scale(0);
     animation-fill-mode: both;
     
-  }
+  }   
 
   .card a{
     display: flex;
+    
+    .text-subtitle{                
+      text-overflow: ellipsis;
+      white-space: nowrap; 
+      overflow: hidden;      
+   }
+   h3{
+    width: 95%;                
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+    overflow: hidden;
+         
+ } 
+ 
+    
 }
+
     .card a:hover .card-bloc-right p{
       width: 100px;      
       border-radius: 0px 10px 10px 0px;
+      
+          
     }
-    .card-bloc-right p:hover .card-bloc-left {
+     .card-bloc-right:hover .card-bloc-left {
       width: calc(100% - 100px);
-    }
-
-    h3{
-      font-weight: 800;
-    }
+      
+     } 
+    
+    /*   /*...*/
+    
+   /* h3{
+      font-weight: 200;
+    } */
 
    .card-bloc-left{
       width: 100%;
       padding: 0.8em 0 0.8em 0.8em;
       position: relative;
-      box-sizing: border-box;
+      box-sizing: border-box;      
     }
    .text{
+     width: 80%; 
       display: flex;
       padding-top: 5px;
-    }
+      
+   } 
 
-      .text:first-child{
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-        width: 82%;
+     .card-bloc-right .al{       
+        width: 100%;
       }
       .price{
         position: absolute;
-        right: 5%;
-      /*   margin-top: 40px;
-        margin-right: 4px; */
+        right: 5%;      
       }
     
  .check{
@@ -101,70 +116,88 @@ h4{
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease;   
+        
   }
-  .fa-check{
-    background-color: white;
-    color: green;
+  .check:hover .fa-circle-check{
+    transition: all 0.3s;
+    transform: rotate(360deg);
+    
+}
+  .fa-circle-check{
+    font-size: x-large;        
+    background: white;    
+    color: #99E2D0;    
     border-radius: 25px;
-  }    
+    
+       
+  }     
+  
     .commande{
         text-align: center;
         width: 100%;
         margin-bottom: 0;
-        margin-top: 20px;
-              
+        margin-top: 20px;              
     }
-
-    @media screen and(min-width: 800px){
+    
+    @media screen and(min-width: 800px)and(max-width: 1245px){
+      .card-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;        
+      }
+      .entrees,.desserts,.plats{        
+        width: 50%;
+      }
+    }
+  @media screen and(min-width: 1250px){
       .main-pages{
         width: 95%;
         margin-left: auto;
-        margin-right: auto;
-        
+        margin-right: auto;        
       }
       .bloc-main-title-page h1{
-        text-align: right;
-        
+        text-align: right;        
       }
-      .bloc-main-title-page .icon-h{
-        
+      .bloc-main-title-page .icon-h{        
         margin-right: 280px;
-        margin-top: 8px;
-        
+        margin-top: 8px;        
       }
-    
+    .card-content{
+         margin-left: 10px;
+         width: 100%;        
+       }    
       .entrees,.desserts,.plats{
               display: flex;
-              flex-direction: column;
-              align-items: center;
+              flex-flow: column; 
+              align-items:center;
               width: 30%;
       }
+      .plats{
+        margin: 0 auto;
+      }
       .main-pages .bloc-card{
-        width: 95%;
+        width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        margin: 0;
-        /* padding-right: 20px; */
+        justify-content: space-between;    
+        
       }
       .bloc-card .card{
         width: 100%;
-        
+        height: auto;        
       }
+      
       .text{
         display: flex;
         justify-content: space-between;
       }
-      .text:first-child p{
-        width: 20%;
-        height: auto;
-      }
+    
       .card-content{
         display: flex;
         flex-direction: row;
-      }
-      
-      
+      }      
       
     }

@@ -120,9 +120,13 @@ table {
   transform: translateX(-50%);
   bottom: 0;
   font-size: 0px;
-  color: #9356DC;
   font-weight: bold;
-  transition-duration: 0.5s;
+  /* transition-duration: 0.5s; */
+  background: linear-gradient(163deg, rgb(238, 115, 218) 0%, rgb(160, 91, 220) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px transparent;
+  transition: 200ms ease-in-out;
 }
 
 /*header*/
@@ -201,9 +205,6 @@ header .banner img {
     margin-right: 10px;
     width: 100%;
   }
-  header .logo-pages img {
-    margin-right: 400px;
-  }
   .logo-pages a i {
     margin-top: 20px;
     font-size: xx-large;
@@ -224,7 +225,6 @@ header .banner img {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  /* width: 90%; */
   height: 60px;
   margin-left: 10px;
   margin-bottom: 20px;
@@ -261,7 +261,7 @@ header .banner img {
 #restos {
   background-color: #f5f5f5;
   padding-left: 20px;
-  padding-right: 10px;
+  padding-right: 20px;
   padding-bottom: 20px;
 }
 #restos h2 {
@@ -280,14 +280,12 @@ header .banner img {
   width: 100%;
   height: auto;
   background-color: white;
-  /* margin-bottom: 20px; */
   border-radius: 10px;
   display: flex;
   flex-direction: column;
 }
 #restos .bloc-card .card a .card-image {
   position: relative;
-  /* margin-bottom: 10px; */
 }
 #restos .bloc-card .card a .card-image img {
   width: 100%;
@@ -343,7 +341,7 @@ header .banner img {
     margin-right: auto;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 800px) and (max-width: 1200px) {
   #restos {
     display: flex;
     justify-content: center;
@@ -352,7 +350,24 @@ header .banner img {
   }
   #restos .bloc-card {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  #restos .card {
+    margin-right: 10px;
+    width: 45%;
+  }
+}
+@media screen and (min-width: 1210px) {
+  #restos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #restos .bloc-card {
+    display: flex;
+    flex-flow: row;
     justify-content: space-between;
   }
   #restos .card {
@@ -401,7 +416,7 @@ h4 {
   background-color: white;
   width: 100%;
   display: block;
-  margin-left: auto; /*centré*/
+  margin-left: auto;
   margin-right: auto;
   margin-top: 12px;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1803921569);
@@ -415,20 +430,31 @@ h4 {
 .card a {
   display: flex;
 }
+.card a .text-subtitle {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.card a h3 {
+  width: 95%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
 
 .card a:hover .card-bloc-right p {
   width: 100px;
   border-radius: 0px 10px 10px 0px;
 }
 
-.card-bloc-right p:hover .card-bloc-left {
+.card-bloc-right:hover .card-bloc-left {
   width: calc(100% - 100px);
 }
 
-h3 {
-  font-weight: 800;
-}
-
+/*   /*...*/
+/* h3{
+   font-weight: 200;
+ } */
 .card-bloc-left {
   width: 100%;
   padding: 0.8em 0 0.8em 0.8em;
@@ -437,22 +463,18 @@ h3 {
 }
 
 .text {
+  width: 80%;
   display: flex;
   padding-top: 5px;
 }
 
-.text:first-child {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 82%;
+.card-bloc-right .al {
+  width: 100%;
 }
 
 .price {
   position: absolute;
   right: 5%;
-  /*   margin-top: 40px;
-    margin-right: 4px; */
 }
 
 .check {
@@ -468,9 +490,15 @@ h3 {
   transition: all 0.3s ease;
 }
 
-.fa-check {
-  background-color: white;
-  color: green;
+.check:hover .fa-circle-check {
+  transition: all 0.3s;
+  transform: rotate(360deg);
+}
+
+.fa-circle-check {
+  font-size: x-large;
+  background: white;
+  color: #99E2D0;
   border-radius: 25px;
 }
 
@@ -481,7 +509,19 @@ h3 {
   margin-top: 20px;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 800px) and (max-width: 1245px) {
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .entrees, .desserts, .plats {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1250px) {
   .main-pages {
     width: 95%;
     margin-left: auto;
@@ -494,30 +534,32 @@ h3 {
     margin-right: 280px;
     margin-top: 8px;
   }
+  .card-content {
+    margin-left: 10px;
+    width: 100%;
+  }
   .entrees, .desserts, .plats {
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
     align-items: center;
     width: 30%;
   }
+  .plats {
+    margin: 0 auto;
+  }
   .main-pages .bloc-card {
-    width: 95%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0;
-    /* padding-right: 20px; */
   }
   .bloc-card .card {
     width: 100%;
+    height: auto;
   }
   .text {
     display: flex;
     justify-content: space-between;
-  }
-  .text:first-child p {
-    width: 20%;
-    height: auto;
   }
   .card-content {
     display: flex;
@@ -532,6 +574,7 @@ footer {
   padding-bottom: 20px;
   padding-left: 20px;
   padding-top: 10px;
+  color: white;
   background-color: #353535;
 }
 footer p {
@@ -539,28 +582,27 @@ footer p {
 }
 footer p a {
   text-decoration: none;
-  color: white;
+  color: #fff;
 }
 footer p a i {
   margin-right: 10px;
 }
-footer p a img {
-  width: 70%;
+footer p a .logo-f {
+  width: 100%;
   height: 25px;
   margin-top: 15px;
+  -webkit-filter: invert(1);
 }
 
 /* RESPONSIVE */
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 600px) {
   footer {
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .logo-f {
-    color: white;
     height: 40px;
-    margin-left: 25px;
     margin-top: 30px;
   }
 }
@@ -595,25 +637,13 @@ button:hover {
   box-shadow: 5px 15px 21px rgba(0, 0, 0, 0.5019607843);
 }
 
-/*POLICES*/
-@font-face {
-  font-family: "Roboto";
-  src: url("Polices/Roboto/Roboto-Regular-webfont.ttf");
-}
-@font-face {
-  font-family: "shrikhand";
-  src: url("Polices/shrikhand/Shrikhand-Regular.ttf");
-}
-h1,
-h2,
-h3,
-p,
-a {
-  font-family: "Roboto";
-}
-
 body {
   background-color: #f6f6f6;
+  font-family: "roboto";
+}
+
+h1, h2, h3, .logo {
+  font-family: "shrikhand";
 }
 
 /***titrage et générique***/
@@ -638,15 +668,14 @@ h2 {
 }
 
 h3 {
-  font-weight: bold;
   margin-bottom: 5px;
+  font-size: 16px;
 }
 
 h4 {
   width: 25px;
   margin-bottom: 10px;
   border-bottom: 2px #b0e0e6 solid;
-  /* margin-left: 10px; */
 }
 
 .logo-pages img {

@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
 }
-
 @mixin flexcolumncentre{
     display: flex;
     flex-direction: column;
@@ -47,8 +46,7 @@
     position: absolute;
     left:-10px; 
 }
-@mixin card-without-image{
-    /* width: 90%; */
+@mixin card-without-image{    
     height: 60px;
     margin-left: 10px;
     margin-bottom: 20px;        
@@ -65,7 +63,7 @@
     display: block;
     width: 100%;
     height: auto;
-    color: black;
+    color: black; 
     
 }
 @mixin  h1style {
@@ -74,22 +72,20 @@
     font-weight: bold;
     
 }
-@mixin h2style {
+@mixin h2style {    
 
     padding-bottom: 20px;                      
     font-weight: bold;
     font-size: 20px;
 }
-@mixin h3style{
-    font-weight: bold;
+@mixin h3style{    
     margin-bottom: 5px;
+    font-size: 16px;
 }
 @mixin h4style {
     width: 25px;
     margin-bottom: 10px;
-    border-bottom: 2px #b0e0e6 solid;
-    /* margin-left: 10px; */
-    
+    border-bottom: 2px #b0e0e6 solid;   
 }
 
 

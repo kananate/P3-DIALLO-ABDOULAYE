@@ -9,7 +9,7 @@
         justify-content: center;
         width: 100px;
         height: 60px;
-        background-color: aqua;
+        color: aqua;
         border-radius: 0 15px 15px 0;
         .fa-check{
             display: flex;
@@ -18,8 +18,8 @@
             width: 20px;
             height: 20px;
             border-radius: 25px;
-            background-color: white;
-            color: aqua;
+            color: white;
+             color: aqua;            
         }
    }
  }
@@ -92,15 +92,18 @@
   }
 
   /* Animation du coeur*/
-
 .fa-heart-animated {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   bottom: 0;
-  font-size: 0px;
-  color: #9356DC;
+  font-size: 0px;  
   font-weight: bold;
-  transition-duration: 0.5s;
+  /* transition-duration: 0.5s; */
+  background: $linear;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px transparent;
+  transition: 200ms ease-in-out;  
 }
   
