@@ -9,11 +9,7 @@ button{
     display: inline-block;
     height: 40px;
     border-radius: 25px; 
-    background-image: linear-gradient( left bottom,$secondary,$primary);
-    background-image: -webkit-linear-gradient( left bottom,#da70d6,#ba55d3);    
-    background-image: -moz-linear-gradient( left bottom,#da70d6,#ba55d3);
-    background-image: -ms-linear-gradient( left bottom,#da70d6,#ba55d3);
-    background-image: -o-linear-gradient( left bottom,#da70d6,#ba55d3);
+    background-image: linear-gradient(to left bottom,$secondary,$primary);   
     border: none;    
     opacity: 0.85;
     color: #fff;
