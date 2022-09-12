@@ -25,13 +25,14 @@
         @include flexcol;            
         .bloc-card{
             @include flexcol;
-            margin-bottom: 10px;          
-            
+            margin-bottom: 10px;
+           
         }
 }
 h4{
     margin-top: 20px;
 }
+
 .card{
     border-radius: 10px;
     background-color: white;
@@ -42,10 +43,14 @@ h4{
     margin-top: 12px;    
     box-shadow: 0 5px 16px #0000002e;
     position: relative;
-    animation-duration: 1s;
+    /* animation-duration: 1s;
     animation-name: appear;
     transform: scale(0);
-    animation-fill-mode: both;
+    animation-fill-mode: both;  */
+    animation-name:appear;
+     animation-duration:1s;
+     animation-timing-function:ease;
+      animation-fill-mode: both;
     
   }   
 
@@ -78,13 +83,7 @@ h4{
       width: calc(100% - 100px);
       
      } 
-    
-    /*   /*...*/
-    
-   /* h3{
-      font-weight: 200;
-    } */
-
+  
    .card-bloc-left{
       width: 100%;
       padding: 0.8em 0 0.8em 0.8em;
@@ -128,9 +127,7 @@ h4{
     font-size: x-large;        
     background: white;    
     color: #99E2D0;    
-    border-radius: 25px;
-    
-       
+    border-radius: 25px;       
   }     
   
     .commande{

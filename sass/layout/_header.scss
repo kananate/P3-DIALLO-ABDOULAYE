@@ -5,6 +5,7 @@ header{
     width: 100%; 
     background-color: $gris;
     .logo{
+        margin: 10px 0;
         position: relative;
         @include aligncenter;
         @include flexcentre;
