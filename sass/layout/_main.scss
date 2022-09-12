@@ -12,7 +12,13 @@
             height: 60px;
             @include flexeven;
             @include card-without-image;                           
-            position: relative;            
+            position: relative;
+            &:hover{
+                 background-color: rgb(241, 231, 239);                 
+                .fa-solid{
+                    color: $primary;
+            } 
+            }            
                 .circle{
                     @include flexcentre;
                     @include form-circle;            
@@ -27,9 +33,7 @@
                 .fa-solid{
                     margin: 0 55px;
                 }
-                .fa-shop{
-                        color: $primary;
-                }                
+                               
            
         }
     

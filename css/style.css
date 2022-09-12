@@ -238,6 +238,12 @@ header .banner img {
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1803921569);
   position: relative;
 }
+#fonctionnement .bloc-card .card:hover {
+  background-color: rgb(241, 231, 239);
+}
+#fonctionnement .bloc-card .card:hover .fa-solid {
+  color: #9356DC;
+}
 #fonctionnement .bloc-card .card .circle {
   display: flex;
   justify-content: center;
@@ -257,9 +263,6 @@ header .banner img {
 }
 #fonctionnement .bloc-card .card .fa-solid {
   margin: 0 55px;
-}
-#fonctionnement .bloc-card .card .fa-shop {
-  color: #9356DC;
 }
 
 /*section restaurant*/
