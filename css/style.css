@@ -616,10 +616,12 @@ footer p a .logo-f {
 }
 .header-button {
   min-width: 100px;
+  padding: 0 30px;
 }
 
 .commande button {
   min-width: 120px;
+  padding: 0 10px;
 }
 
 button {

@@ -1,8 +1,10 @@
 .header-button{    
-    min-width: 100px;    
+    min-width: 100px;
+    padding: 0 30px;    
     }
     .commande button{        
-        min-width: 120px;     
+        min-width: 120px;
+        padding: 0 10px;     
     }                 
 
 button{
@@ -14,7 +16,8 @@ button{
     opacity: 0.85;
     color: #fff;
     transition: 400ms;
-    margin-bottom: 20px;    
+    margin-bottom: 20px; 
+       
     cursor: pointer;
     &:hover{
       cursor: pointer;
